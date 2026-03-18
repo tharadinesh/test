@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GVET Registration</title>
+    <!-- You can link a CSS file here for styling: <link rel="stylesheet" href="styles.css"> -->
+</head>
+<body>
+    <h1>GVET Registration Form</h1>
+
+    <form action="submit_form.php" method="POST">
+        <!-- The 'action' attribute should point to your server-side script (e.g., PHP, Python) for form processing -->
+
+        <label for="firstname">First Name:</label>
+        <input type="text" id="firstname" name="firstname" required><br><br>
+
+        <label for="lastname">Last Name:</label>
+        <input type="text" id="lastname" name="lastname" required><br><br>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Mobile Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required title="Enter a 10-digit mobile number"><br><br>
+
+        <label for="course">Select Course/Program:</label>
+        <select id="course" name="course">
+            <option value="none">Select...</option>
+            <option value="medical">Medical</option>
+            <option value="engineering">Engineering</option>
+            <option value="foundation">Foundation</option>
+        </select><br><br>
+
+        <fieldset>
+            <legend>Gender:</legend>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+        </fieldset><br>
+
+        <input type="submit" value="Register">
+    </form>
+
+</body>
+</html>
